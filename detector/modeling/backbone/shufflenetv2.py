@@ -103,7 +103,7 @@ class ShuffleNetV2(nn.Module):
                 else:
                     stageSeq.append(
                             ShuffleNetV2Block(input_channel // 2, output_channel, mid_channels=output_channel//2,
-                                              ksize=3, stride=2)
+                                              ksize=3, stride=1)
                             )
                 
                 input_channel = output_channel
