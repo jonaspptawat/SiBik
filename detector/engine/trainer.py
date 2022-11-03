@@ -55,7 +55,7 @@ class Trainer:
         print(f"Total images:{len(self.train_loader.dataset)}")
         print(f"Starting training from epoch {self.start_epoch+1}/{self.EPOCHS}")
         
-        self.batch_num = self.start_epoch * self.cfg.INPUT.SIZE_TRAIN
+        self.batch_num = self.start_epoch * self.cfg.DATA.SIZE_TRAIN
         if self.batch_num <= self.warmup_num:
             print("Learning Rate WARMUP is used")
 
@@ -94,7 +94,7 @@ class Trainer:
                 batch_loss.append(total_loss)
                 self.batch_num += 1
             
-            print(f"(Average) Total Loss for epoch{epochi+1}: {sum(batch_loss) / len(batch_loss):.2f}")
+            print(f"(Average) Total Loss for epoch{epochi+1}: {sum(batch_loss) / (len(batch_loss) + 1e-6):.2f}")
             # Evaluate on Validation set for every 5 epochs
             if (epochi+1) % self.cfg.SOLVER.LOG_PERIOD == 0:
                 self.model.eval()
