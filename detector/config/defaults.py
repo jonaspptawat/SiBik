@@ -1,5 +1,5 @@
 from yacs.config import CfgNode as CN
-
+import torch
 
 # -----------------------------------------------------------------------------
 # Config definition
@@ -11,7 +11,7 @@ _C = CN()
 # -----------------------------------------------------------------------------
 _C.MODEL = CN()
 # Device for model
-_C.MODEL.DEVICE = "cpu"
+_C.MODEL.DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 # Backbone weight path
 _C.MODEL.BACKBONE = "" 
 # Detector weight path

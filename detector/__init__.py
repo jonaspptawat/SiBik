@@ -26,8 +26,8 @@ def build_transforms():
 
 def get_detector():
     model = build_detector(det_cfg.DATA.NUM_CLASSES)
-    if len(det_cfg.CHECKPOINT.PATH) > 0:
-        weight_state_dict = torch.load(det_cfg.CHECKPOINT.PATH, map_location="cpu")["model_state_dict"]
+    if len(det_cfg.MODEL.DETWEIGHT) > 0:
+        weight_state_dict = torch.load(det_cfg.MODEL.DETWEIGHT, map_location="cpu")["model_state_dict"]
         model.load_state_dict(weight_state_dict)
     
     model.eval()
