@@ -28,6 +28,12 @@ _C.DATA.CLASSES = ["car", "motorcycle"]
 # Width and Height
 _C.DATA.WIDTH = 416
 _C.DATA.HEIGHT = 416
+# Dataset Path
+_C.DATA.TRAIN = "./data/datasets/cars/train"
+_C.DATA.VAL = "./data/dataset/cars/val"
+# Batch size
+_C.DATA.SIZE_TRAIN = 32
+_C.DATA.SIZE_VAL = 32
 
 # -----------------------------------------------------------------------------
 # Transformation
