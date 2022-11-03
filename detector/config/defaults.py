@@ -47,3 +47,12 @@ _C.T.CONTRAST_JITTER = 0.2
 _C.T.PROB_BRIGHTCONTRAST = 0.1
 # Bounding box min visibility
 _C.T.BBOX_MINVIS = 0.55
+
+# -----------------------------------------------------------------------------
+# Test
+# -----------------------------------------------------------------------------
+_C.TEST = CN()
+# Confident, NMS, MAP Threshold
+_C.TEST.CONF_THRESH = 0.85
+_C.TEST.NMS_THRESH = 0.005
+_C.TEST.MAP_THRESH = 0.85
