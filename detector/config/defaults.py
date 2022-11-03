@@ -32,8 +32,8 @@ _C.DATA.HEIGHT = 416
 _C.DATA.TRAIN = "./data/datasets/cars/train"
 _C.DATA.VAL = "./data/datasets/cars/val"
 # Batch size
-_C.DATA.SIZE_TRAIN = 1
-_C.DATA.SIZE_VAL = 1
+_C.DATA.SIZE_TRAIN = 32
+_C.DATA.SIZE_VAL = 32
 
 # -----------------------------------------------------------------------------
 # Transformation
@@ -77,8 +77,8 @@ _C.SOLVER.STEPS = (150, 300, 450, 600)
 _C.SOLVER.WARMUP_EXPO = 1.0 / 3
 _C.SOLVER.WARMUP_ITERS_TIMES = 5
 
-_C.SOLVER.CHECKPOINT_PERIOD = 1
-_C.SOLVER.LOG_PERIOD = 1
+_C.SOLVER.CHECKPOINT_PERIOD = 5
+_C.SOLVER.LOG_PERIOD = 3
 
 # -----------------------------------------------------------------------------
 # Checkpoint
