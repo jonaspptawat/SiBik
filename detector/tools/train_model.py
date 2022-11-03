@@ -14,7 +14,7 @@ if __name__ == "__main__":
     val_loader = build_dataloader(cfg, is_train=False, shuffle=True) # Need Changeeee !!!
     evaluator = compute_map
     
-    loss_fn = DetectorLoss(cfg.MODEL.DEVICE)
+    loss_fn = DetectorLoss(cfg)
     optimizer_name = cfg.SOLVER.OPTIMIZER_NAME
     optim = getattr(torch.optim, optimizer_name)
     optimizer = optim(model.parameters(), lr=cfg.SOLVER.BASE_LR,
