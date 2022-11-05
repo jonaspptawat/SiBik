@@ -55,3 +55,36 @@ _C.INPUT.PROB_TOGRAY = 0.05
 # Coarse Dropout Probability
 _C.INPUT.PROB_CDROP = 0.55
 
+# -----------------------------------------------------------------------------
+# Checkpoint
+# -----------------------------------------------------------------------------
+_C.CHECKPOINT = CN()
+# Checkpoint file path
+_C.CHECKPOINT.PATH = "./checkpoint/check.pth"
+# Checkpoint file path for feature extractor
+_C.CHECKPOINT.PATH_FE = "./checkpoint/reid_weight.pth"
+# ---------------------------------------------------------------------------- #
+# Solver
+# ---------------------------------------------------------------------------- #
+_C.SOLVER = CN()
+_C.SOLVER.OPTIMIZER_NAME = "SGD"
+
+_C.SOLVER.EPOCHS = 1000
+
+_C.SOLVER.BASE_LR = 0.005
+
+_C.SOLVER.MOMENTUM = 0.9
+
+_C.SOLVER.WEIGHT_DECAY = 0.0005
+
+_C.SOLVER.GAMMA = 0.1
+_C.SOLVER.STEPS = (100, 150, 200, 250, 300)
+
+_C.SOLVER.WARMUP_EXPO = 1.0 / 3
+_C.SOLVER.WARMUP_ITERS_TIMES = 1
+
+_C.SOLVER.CHECKPOINT_PERIOD = 1
+_C.SOLVER.LOG_PERIOD = 1
+
+# Triplet loss margin value
+_C.SOLVER.TRIPLET_MARGIN = 1
