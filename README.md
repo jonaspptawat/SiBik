@@ -36,7 +36,7 @@ python3 tracker_vid.py
 The datasets that I used for training SiBik are collected by attaching camera under my bicycle and recording video while cycling in Chaing Mai, Thailand. To label data, i saved images from video that i gathered from riding a bike around Chiang Mai every N seconds and labelled each image using [Yolo_Label](https://github.com/developer0hye/Yolo_Label).
 
 ### 2. Store labelled datasets
-- Object detector
+####Object detector
 ```bash
 cd detector/
 ```
@@ -67,7 +67,7 @@ cd detector/
 │       ├── __init__.py
 │       └── build.py
 ```
-- Object Re-Identification
+####Object Re-Identification
 For object re-identification dataset preparation, I used the labelled dataset and cropped all detected images. Then, manually selected cropped images.
 ```bash
 cd tracker/reid/
