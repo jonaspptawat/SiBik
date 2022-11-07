@@ -197,3 +197,6 @@ quantize_static("det_model.onnx",
 
 [StrongSORT](https://github.com/dyhBUPT/StrongSORT)
 
+## Special Thanks
+
+Dr. Saronsad Sokantika (Project Advisor)
