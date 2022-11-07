@@ -34,3 +34,38 @@ python3 tracker_vid.py
 
 ### 1. Data Gathering and Labeling
 The datasets that I used for training SiBik are collected by attaching camera under my bicycle and recording video while cycling in Chaing Mai, Thailand. To label data, i cropped images from video that i gathered from riding a bike around Chiang Mai every N seconds and labelled each image using [Yolo_Label](https://github.com/developer0hye/Yolo_Label).
+
+### 2. Store labelled datasets
+- Object detector
+```bash
+cd detector/
+```
+
+```bash
+├── data
+│   ├── __init__.py
+│   ├── build.py
+│   ├── collate_batch.py
+│   ├── datasets
+│   │   ├── __init__.py
+│   │   ├── build.py
+│   │   └── cars
+│   │       ├── README.md
+│   │       ├── train
+│   │       │   ├── 001.jpg
+│   │       │   ├── 001.txt
+│   │       │   ├── 002.jpg
+│   │       │   ├── 002.txt
+│   │       │   └── README.md
+│   │       └── val
+│   │           ├── 003.jpg
+│   │           ├── 003.txt
+│   │           ├── 004.jpg
+│   │           ├── 004.txt
+│   │           └── README.md
+│   └── transforms
+│       ├── __init__.py
+│       └── build.py
+```
+
+
