@@ -17,3 +17,21 @@ For Backbone, SiBik uses outputs from ShuffleNetV2's stage2 to stage4. Next, the
 ### Object Re-Identification (OSNet)
 SiBik uses OSNet to extract features from detected object in detection process in order to make StrongSORT stronger.
 ![Alt Text](https://github.com/jonaspptawat/SiBik/blob/main/REID_OSNet.png)
+
+## How to use
+
+### 1. Install all dependencies in this project
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Paste your mp4 video and Run tracker_vid
+```bash
+python3 tracker_vid.py
+```
+
+## Train on your custom datasets
+
+### 1. Data Gathering
+
+
