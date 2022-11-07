@@ -176,3 +176,6 @@ time_until_hit = (distance / speed)
 time_thresh = 5
 ```
 
+### Things that can be improved
+
+I have been finding lots of problems ever since i started this project. There are many parts that can be improved such as cosine similarity, jittered bounding box and distance calculation.
