@@ -1,5 +1,5 @@
 # Real-time approaching vehicle detection with Yolo and StrongSORT using smartphone camera for cyclist
-SiBik (Sight and Bike) built with PyTorch, OpenCV and ONNX using Yolo and StrongSORT with OSNet in order to detect and track vehicle. It aims to assist and prevent cyclists from approaching vehicles using their own smartphone camera in real-time. For an approaching vehicle warning conditions, SiBik uses Cosine similarity of two frames and Object's speed and distance.
+SiBik (Sight and Bike) built with PyTorch, OpenCV and ONNX using Yolo and StrongSORT with OSNet in order to detect and track vehicle. It aims to assist and prevent cyclists from approaching vehicles using their own smartphone camera in real-time. For an approaching vehicle warning conditions, These conditions based on Cosine similarity of two frames and Object's speed and distance.
 
 ![Alt Text](https://github.com/jonaspptawat/SiBik/blob/main/example1.gif)
 
@@ -132,4 +132,38 @@ After finishing training process, the model's weight will be in **checkpoint/**
 checkpoint
 ├── README.md
 └── checkpt.pth
+```
+
+## An approaching vehicle warning system
+There are two files that have been modified in order to implement an approaching vehicle warning system which are **tracker/sort/track.py** and **tracker/strong_sort.py**.
+
+### tracker/sort/track.py
+You can modify the distance calculator's parameters and delay for cosine similarity between frames.
+```python
+R_DISTANCE = 80.0
+MOTORCYCLE_WIDTH = 150.0
+CAR_WIDTH = 300.0
+REF_MOTOR_WIDTH_PX = 300.0
+REF_CAR_WIDTH_PX = 500.0
+```
+
+```python    
+# To get previous midpoint
+self.frame_count = 0
+self.get_sample_every = 3
+self.prev_point = []
+self.cosine_list = []
+self.n_prev_cosine = 5
+self.current_cosine = 0
+        
+# Distance
+if class_id == 1:
+    self.F = (REF_MOTOR_WIDTH_PX * R_DISTANCE) / MOTORCYCLE_WIDTH # Focal length
+else:
+    self.F = (REF_CAR_WIDTH_PX * R_DISTANCE) / MOTORCYCLE_WIDTH
+
+self.distance = []
+self.speed_list = []
+self.n_speed = 5
+self.curr_speed = 0.1
 ```
