@@ -179,3 +179,13 @@ time_thresh = 5
 ### Things that can be improved
 
 I have been finding lots of problems ever since i started this project. There are many parts that can be improved such as cosine similarity, jittered bounding box and distance calculation.
+
+## Convert to quantized ONNX format
+1. Convert from PyTorch to ONNX format
+2. Convert from ONNX model to quantized ONNX model (SiBik have used static quantization method)
+
+```python
+quantize_static("det_model.onnx",
+                "det_static_quan.onnx",
+                dr)
+```
