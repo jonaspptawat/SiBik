@@ -32,6 +32,5 @@ python3 tracker_vid.py
 
 ## Train on your custom datasets
 
-### 1. Data Gathering
-
-
+### 1. Data Gathering and Labeling
+The datasets that I used for training SiBik are collected by attaching camera under my bicycle and recording video while cycling in Chaing Mai, Thailand. To label data, i cropped images from video that i gathered from riding a bike around Chiang Mai every N seconds and labelled each image using [Yolo_Label](https://github.com/developer0hye/Yolo_Label).
