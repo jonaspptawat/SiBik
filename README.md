@@ -125,3 +125,11 @@ python3 tools/train_model.py
 cd tracker/reid/
 python3 tools/train_model.py
 ```
+
+After finishing training process, the model's weight will be in **checkpoint/**
+
+```bash
+checkpoint
+├── README.md
+└── checkpt.pth
+```
