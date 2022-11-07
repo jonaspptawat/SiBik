@@ -13,3 +13,7 @@ YOLO (You Only Look Once) in SiBik has three main parts which are Backbone, Neck
 
 For Backbone, SiBik uses outputs from ShuffleNetV2's stage2 to stage4. Next, the Backbone's output will be passed through Feature Pyramid Network and Spatial Pyramid Pooling in Neck part and Prediction part respectively as shown in the following image.
 ![Alt Text](https://github.com/jonaspptawat/SiBik/blob/main/overview_detector.png)
+
+### Object Re-Identification (OSNet)
+SiBik uses OSNet to extract features from detected object in detection process in order to make StrongSORT stronger.
+![Alt Text](https://github.com/jonaspptawat/SiBik/blob/main/REID_OSNet.png)
