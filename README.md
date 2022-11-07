@@ -105,3 +105,10 @@ cd tracker/reid/
 │       └── build.py
 ```
 
+### 3. Set hyperparameter in config file
+You can set all hyperparameter in config file for every model in **defaults.py**.
+```bash
+config
+├── __init__.py
+└── defaults.py
+```
