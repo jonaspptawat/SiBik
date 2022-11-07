@@ -137,8 +137,9 @@ checkpoint
 ## An approaching vehicle warning system
 There are two files that have been modified in order to implement an approaching vehicle warning system which are **tracker/sort/track.py** and **tracker/strong_sort.py**.
 
+You can modify the distance calculator's parameters and delay for cosine similarity between frames. I used cosine similarity to calculate whether two frames's midpoint(x, y) and two corners (bottom-left and bottom-right) go the same direction or not. Moreover, I also calculated **time_until_hit** from speed, distance and current time frame.
+
 ### tracker/sort/track.py
-You can modify the distance calculator's parameters and delay for cosine similarity between frames.
 ```python
 R_DISTANCE = 80.0
 MOTORCYCLE_WIDTH = 150.0
@@ -167,3 +168,11 @@ self.speed_list = []
 self.n_speed = 5
 self.curr_speed = 0.1
 ```
+
+### ./track_vid.py
+I set time thresh to 5 which means 5 seconds before the current object will hit.
+```python
+time_until_hit = (distance / speed)
+time_thresh = 5
+```
+
