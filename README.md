@@ -192,6 +192,8 @@ quantize_static("det_model.onnx",
 
 ## References
 [Yolov5_StrongSORT_OSNet](https://github.com/mikel-brostrom/Yolov5_StrongSORT_OSNet)
+
 [deep_sort](https://github.com/nwojke/deep_sort)
+
 [StrongSORT](https://github.com/dyhBUPT/StrongSORT)
 
