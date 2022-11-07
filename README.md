@@ -105,10 +105,23 @@ cd tracker/reid/
 │       └── build.py
 ```
 
-### 3. Set hyperparameter in config file
+### 3. Set hyperparameters in config file
 You can set all hyperparameter in config file for every model in **defaults.py**.
 ```bash
 config
 ├── __init__.py
 └── defaults.py
+```
+
+### 4. Train
+4.1 Train detector
+```bash
+cd detector/
+python3 tools/train_model.py
+```
+
+4.2 Train Re-ID
+```bash
+cd tracker/reid/
+python3 tools/train_model.py
 ```
