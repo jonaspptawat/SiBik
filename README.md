@@ -33,7 +33,7 @@ python3 tracker_vid.py
 ## Train on your custom datasets
 
 ### 1. Data Gathering and Labeling
-The datasets that I used for training SiBik are collected by attaching camera under my bicycle and recording video while cycling in Chaing Mai, Thailand. To label data, i cropped images from video that i gathered from riding a bike around Chiang Mai every N seconds and labelled each image using [Yolo_Label](https://github.com/developer0hye/Yolo_Label).
+The datasets that I used for training SiBik are collected by attaching camera under my bicycle and recording video while cycling in Chaing Mai, Thailand. To label data, i saved images from video that i gathered from riding a bike around Chiang Mai every N seconds and labelled each image using [Yolo_Label](https://github.com/developer0hye/Yolo_Label).
 
 ### 2. Store labelled datasets
 - Object detector
@@ -67,5 +67,40 @@ cd detector/
 │       ├── __init__.py
 │       └── build.py
 ```
-
+- Object Re-Identification
+For object re-identification dataset preparation, I used the labelled dataset and cropped all detected images. Then, manually selected cropped images.
+```bash
+cd tracker/reid/
+```
+```bash
+├── data
+│   ├── __init__.py
+│   ├── build.py
+│   ├── dataset
+│   │   ├── __init__.py
+│   │   ├── build.py
+│   │   └── cars
+│   │       ├── train
+│   │       │   ├── 1
+│   │       │   │   ├── 001_1.jpg
+│   │       │   │   └── 001_2.jpg
+│   │       │   ├── 2
+│   │       │   │   ├── 002_1.jpg
+│   │       │   │   └── 002_2.jpg
+│   │       │   ├── 3
+│   │       │   │   ├── 003_1.jpg
+│   │       │   │   └── 003_2.jpg
+│   │       │   └── README.md
+│   │       └── val
+│   │           ├── 1
+│   │           │   ├── 001_3.jpg
+│   │           │   └── 001_4.jpg
+│   │           ├── 2
+│   │           │   ├── 002_3.jpg
+│   │           │   └── 002_4.jpg
+│   │           └── README.md
+│   └── transform
+│       ├── __init__.py
+│       └── build.py
+```
 
